@@ -41,6 +41,25 @@
     overflow-x: auto;
     white-space: nowrap;
     }
+	  /* Для десктопов */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Для мобильных */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  nav a {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+}
     .hero {
       background: #222;
       padding: 40px 20px;

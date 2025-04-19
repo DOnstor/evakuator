@@ -128,34 +128,63 @@ nav {
 </head>
 <body>
 <header style="background: linear-gradient(to right, #000000, #222); padding: 15px 0; border-bottom: 2px solid gold;">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
-    <div style="display: flex; align-items: center;">
-      <img src="Image/Logo.png" alt="Логотип" style="height: 100px; margin-right: 15px; margin-bottom: -13px;">
-      <a href="tel:+79933601228" style="color: gold; font-weight: bold; text-decoration: none; font-size: 18px;">
-        +7 (993) 360-12-28
-      </a>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <!-- Десктопная версия -->
+    <div style="display: flex; align-items: center; justify-content: space-between;" class="desktop-header">
+      <img src="Image/Logo.png" alt="Логотип" style="height: 80px;">
+      
+      <div style="display: flex; align-items: center; gap: 30px;">
+        <a href="tel:+79933601228" style="color: gold; font-weight: bold; text-decoration: none; font-size: 18px; white-space: nowrap;">
+          +7 (993) 360-12-28
+        </a>
+        
+        <nav style="display: flex; gap: 20px;">
+          <a href="#prices" style="color: gold; text-decoration: none; font-weight: bold;">Цены</a>
+          <a href="#locations" style="color: gold; text-decoration: none; font-weight: bold;">Локации</a>
+          <a href="#vehicles" style="color: gold; text-decoration: none; font-weight: bold;">Техника</a>
+          <a href="#contact" style="color: gold; text-decoration: none; font-weight: bold;">Контакты</a>
+        </nav>
+      </div>
     </div>
     
-    <nav style="display: flex; gap: 25px;">
-      <a href="#prices" style="color: gold; text-decoration: none; font-weight: bold; position: relative; padding: 5px 0;">
-        <span style="position: relative; z-index: 2;">Цены</span>
-        <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: gold; transition: width 0.3s;"></span>
-      </a>
-		 <a href="#locations" style="color: gold; text-decoration: none; font-weight: bold; position: relative; padding: 5px 0;">
-        <span style="position: relative; z-index: 2;">Локации</span>
-        <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: gold; transition: width 0.3s;"></span>
-      </a>
-		 <a href="#vehicles" style="color: gold; text-decoration: none; font-weight: bold; position: relative; padding: 5px 0;">
-        <span style="position: relative; z-index: 2;">Техника</span>
-        <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: gold; transition: width 0.3s;"></span>
-      </a>
-		 <a href="#contact" style="color: gold; text-decoration: none; font-weight: bold; position: relative; padding: 5px 0;">
-        <span style="position: relative; z-index: 2;">Контакты</span>
-        <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: gold; transition: width 0.3s;"></span>
-      </a>
-    </nav>
+    <!-- Мобильная версия -->
+    <div style="display: none;" class="mobile-header">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <img src="Image/Logo.png" alt="Логотип" style="height: 60px;">
+        
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
+          <a href="tel:+79933601228" style="color: gold; font-weight: bold; text-decoration: none; font-size: 16px;">
+            +7 (993) 360-12-28
+          </a>
+          
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px 15px;">
+            <a href="#prices" style="color: gold; text-decoration: none; font-weight: bold; font-size: 14px;">Цены</a>
+            <a href="#locations" style="color: gold; text-decoration: none; font-weight: bold; font-size: 14px;">Локации</a>
+            <a href="#vehicles" style="color: gold; text-decoration: none; font-weight: bold; font-size: 14px;">Техника</a>
+            <a href="#contact" style="color: gold; text-decoration: none; font-weight: bold; font-size: 14px;">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
+
+<style>
+  @media (max-width: 768px) {
+    .desktop-header {
+      display: none !important;
+    }
+    .mobile-header {
+      display: block !important;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-header {
+      display: none !important;
+    }
+  }
+</style>
   <section class="hero">
     <h1>ЭВАКУАТОР В МОЖАЙСКЕ И В ОКРУГЕ — НЕДОРОГО</h1>
     <p>Работаем круглосуточно и без выходных</p>

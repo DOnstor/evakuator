@@ -181,7 +181,7 @@
       }
       
       .img-small {
-        width: 150px;
+        width: 130px;
       }
       
       /* Раздел "Почему выбирают нас" */
@@ -193,6 +193,56 @@
     width: 100%;
     max-width: 130px;
     height: auto;
+			
+			
+  }
+		  /* Общие исправления для всей страницы */
+  body {
+    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+    width: 100%;
+  }
+  
+  /* Исправление для разделов с иконками */
+  .prices, .locations, .vehicles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 10px; /* Добавляем отступы по бокам */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .price-item, .vehicle-item {
+    margin: 0 auto; /* Центрируем элементы */
+    width: calc(100% - 20px); /* Учитываем отступы */
+    max-width: 160px; /* Ограничиваем максимальную ширину */
+  }
+  
+  /* Исправление для иконок цен */
+  .price-img {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Исправление для раздела "Почему выбирают нас" */
+  section:nth-child(6) .vehicle-item {
+    padding: 10px;
+  }
+  
+  section:nth-child(6) .vehicle-item img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Исправление для заголовков в карточках */
+  .price-item h3, .vehicle-item p {
+    font-size: 14px;
+    margin: 5px 0;
+    text-align: center;
   }
     }
     
